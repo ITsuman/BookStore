@@ -1,0 +1,207 @@
+.orders-page {
+  background: #0f172a;
+  min-height: calc(100vh - 60px);
+  padding: 28px 32px 60px;
+}
+
+.orders-page h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f3f4f6;
+  margin: 0 0 28px;
+}
+
+.orders-section {
+  margin-bottom: 36px;
+}
+
+.orders-section h2 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin: 0 0 14px;
+}
+
+/* Order card */
+.order-card {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.order-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.order-header:hover { background: #263445; }
+
+.order-id   { font-size: 0.85rem; font-weight: 600; color: #60a5fa; flex: 1; }
+.order-date { font-size: 0.8rem; color: #9ca3af; white-space: nowrap; }
+.order-total{ font-size: 0.9rem; font-weight: 700; color: #f3f4f6; white-space: nowrap; }
+
+.order-status {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.status-delivered   { background: #052e16; color: #22c55e; border: 1px solid #16a34a; }
+.status-processing  { background: #1e3a5f; color: #60a5fa; border: 1px solid #3b82f6; }
+.status-cancelled   { background: #450a0a; color: #f87171; border: 1px solid #ef4444; }
+.status-shipped     { background: #1c1917; color: #f59e0b; border: 1px solid #d97706; }
+
+.expand-btn {
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  display: flex;
+  padding: 4px;
+}
+
+.order-body {
+  padding: 16px 20px;
+  border-top: 1px solid #374151;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.order-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.order-item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.order-item-title { font-size: 0.875rem; font-weight: 600; color: #f3f4f6; text-decoration: none; }
+.order-item-title:hover { color: #60a5fa; }
+.order-item-author { font-size: 0.75rem; color: #60a5fa; }
+.order-item-meta   { font-size: 0.72rem; color: #9ca3af; }
+.order-item-price  { font-size: 0.9rem; font-weight: 700; color: #f3f4f6; }
+
+.order-cancel-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: rgba(239,68,68,0.07);
+  border: 1px solid rgba(239,68,68,0.2);
+  border-radius: 8px;
+}
+
+.cancel-note { font-size: 0.8rem; color: #fca5a5; }
+
+.btn-cancel-order {
+  padding: 6px 16px;
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-cancel-order:hover { background: #dc2626; }
+
+/* History */
+.history-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 16px;
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.history-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.history-title  { font-size: 0.9rem; font-weight: 600; color: #f3f4f6; text-decoration: none; }
+.history-title:hover { color: #60a5fa; }
+.history-author { font-size: 0.75rem; color: #60a5fa; }
+.history-meta   { font-size: 0.72rem; color: #9ca3af; }
+.history-price  { font-size: 0.9rem; font-weight: 700; color: #f3f4f6; }
+
+.btn-buy-again {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 14px;
+  background: #374151;
+  border: 1px solid #4b5563;
+  border-radius: 8px;
+  color: #d1d5db;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.btn-buy-again:hover { background: #4b5563; color: #fff; }
+
+/* Empty / login states */
+.empty-orders,
+.orders-login-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 60px 0;
+  color: #9ca3af;
+  text-align: center;
+}
+
+.empty-orders p,
+.orders-login-prompt h2 {
+  margin: 0;
+  color: #f3f4f6;
+  font-size: 1rem;
+}
+
+.orders-login-prompt {
+  min-height: calc(100vh - 60px);
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 10px 24px;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover { background: #1d4ed8; }

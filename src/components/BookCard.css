@@ -1,0 +1,153 @@
+.book-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.badge-new,
+.badge-best {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 20px;
+  z-index: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-new  { background: #16a34a; color: #fff; }
+.badge-best { background: #d97706; color: #fff; }
+
+.book-card-cover {
+  display: flex;
+  justify-content: center;
+  padding: 20px 20px 12px;
+  background: #111827;
+}
+
+.book-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px 14px;
+  flex: 1;
+}
+
+.book-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #f3f4f6;
+  text-decoration: none;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.book-title:hover { color: #60a5fa; }
+
+.book-author {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.book-author span {
+  color: #60a5fa;
+  cursor: pointer;
+}
+
+.book-meta {
+  font-size: 0.7rem;
+  color: #6b7280;
+}
+
+.separator { margin: 0 4px; }
+
+.book-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 2px;
+}
+
+.rating-val {
+  font-size: 0.75rem;
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.book-price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f3f4f6;
+  margin-top: 4px;
+}
+
+.book-delivery {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.7rem;
+  color: #6b7280;
+}
+
+.book-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.btn-cart {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px 12px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-cart:hover { background: #1d4ed8; }
+
+.btn-wish {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  background: #374151;
+  border: 1px solid #4b5563;
+  border-radius: 8px;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+
+.btn-wish:hover,
+.btn-wish.active {
+  background: #4b5563;
+  color: #f43f5e;
+}
